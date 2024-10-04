@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nisha Bank App</title>
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="intro">Welcome to Nisha Bank App</h1>
+        <p style="font-size:26px; padding-left: 35px; font-weight: 200">Please fill the form below</p>
+        <form class="form">
+        <label class="Form-text">
+          FirstName:
+            <input type="text" class="inputInfo" id="firstName">
+        </label>
+         <label class="Form-text">
+            LastName:
+            <input type="text" class="inputInfo" id="lastName">
+        </label>
+         <label class="Form-text">
+            Date of Birth:
+            <input type="date" class="inputInfo" id="dateOfBirth">
+        </label>
+        <label class="Form-text">
+            Phone Number:
+            <input type="number" class="inputInfo" id="phoneNumber">
+        </label>
+          <label class="Form-text">
+            Email:
+            <input type="email" class="inputInfo" id="email"> 
+        </label> 
+        <label class="Form-text">
+            Pin:
+            <input type="number" class="inputInfo" id="pin"> 
+        </label> 
+        <label class="Form-text">
+            Password:
+            <input type="password" class="inputInfo" id="password">
+             <div id="message" style="font-weight: 300; font-size: 20px; color: red;"></div>
+             </label>
+         <label class="Form-text">
+            Confirm Password:
+            <input type="password" class="inputInfo" id="confirmPassword">
+        </label> 
+        </form>
+        <div style="padding-left: 270px; transform: translateY(-25px)">If you have an account before <a style="margin-left: 3px" href="#"> log in</a></div>
+        <button id="submitForm">Submit Form</button>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html> 

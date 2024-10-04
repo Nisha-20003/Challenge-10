@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        div.container{
+    height: 700px;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 1px 1px 7px black;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+   div h1.intro{
+       text-align: center;
+       margin: 25px;
+       color: #aaa;
+   }
+   form.form{
+       padding: 62px;
+       display: flex;
+       flex-direction: column;
+       row-gap: 30px;
+   }
+   label.Form-text{
+       font-weight: 450;
+       font-size: 30px;
+   }
+   input{
+       display: block;
+       width: 100%;
+       height: 100%;
+       border: 1px solid black;
+       background-color: #ddd;
+       border-radius: 7px;
+       font-size: 30px;
+   }
+   button{
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+       height: 50px;
+       width: 200px;
+       border-radius: 7px;
+       background-color: black;
+       color: white;
+       font-size: 20px;
+   }
+   #messagess, #message{
+       color: red;
+       font-weight: 200px;
+       font-size: 25px;
+   }
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+       <h1 class="intro">Welcome to Nisha Bank App</h1>
+       <form class="form">
+            <label class="Form-text">
+            Email:
+            <input type="email" class="inputInfo" id="emails"> 
+            </label> 
+            <div id="messagess"></div>
+           <label class="Form-text">
+            Password:
+            <input type="password" class="inputInfo" id="passwords"></label>
+            <div id="message"></div>
+       </form>
+        <div style="padding-left: 170px; transform: translateY(-50px)">If you do not have an account before <a style="margin-left: 3px" href="index.html"> log in</a></div>
+        <button id="submitForms">Submit Form</button>
+   </div>     
+ 
+</body>
+<script>
+    const password = localStorage.getItem("password");
+    const email = localStorage.getItem("email");
+    let passwords = document.getElementById("passwords");
+    let emails = document.getElementById("emails")
+    let message = document.getElementById("message")
+    let messagess = document.getElementById("messagess")
+    let submitForms = document.getElementById("submitForms");
+    
+   submitForms.addEventListener("click",(e) =>{
+   if(passwords.value !== password){
+      message.innerHTML = "Incorrect password. Input the correct password";
+      passwords.value = "";
+   }
+   else if(emails.value !== email){
+       messagess.innerHTML = "Incorrect email. Input the correct email"
+       emails.value = "";
+   }
+   else{
+       window.location.href = "Home.html";
+   }
+   });
+</script>
+</html>
